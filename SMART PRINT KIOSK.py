@@ -1,4 +1,4 @@
-# Smart Print Kiosk - Beginner Friendly Code
+# Smart Print Kiosk 
 
 print("------ SMART PRINT KIOSK ------")
 
