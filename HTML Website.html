@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Print Kiosk</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f0f2f5; display: flex; justify-content: center; padding: 20px; }
+        .container { background: white; padding: 30px; width: 100%; max-width: 400px; }
+        h2 { color: #1a73e8; text-align: center; }
+        label { font-weight: bold; display: block; margin-top: 15px; }
+        input, select { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ddd; box-sizing: border-box; }
+        button { width: 100%; background: #1a73e8; color: white; border: none; padding: 15px; margin-top: 20px; font-size: 16px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Smart Print Kiosk</h2>
+    
+    <form method="POST" enctype="multipart/form-data">
+        
+        <label>Step 1: Upload File</label>
+        <input type="file" name="document" required>
+
+        <label>Step 2: Number of Pages</label>
+        <input type="number" name="pages" required min="1" value="1">
+
+        <label>Step 3: Print Type</label>
+        <select name="color">
+            <option value="bw">Black & White (Rs. 5)</option>
+            <option value="color">Color (Rs. 10)</option>
+        </select>
+
+        <label>Step 4: Paper Type</label>
+        <select name="paper">
+            <option value="normal">Normal Paper</option>
+            <option value="thick">Thick Paper (+ Rs. 10)</option>
+        </select>
+
+        <button type="submit">Calculate & Prepare Print</button>
+    </form>
+
+    
+    <button style="background: #34a853;">Pay with UPI</button>
+  
+</div>
+
+</body>
+</html>
